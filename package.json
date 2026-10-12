@@ -1,0 +1,13 @@
+{
+  "name": "world-wide-bistro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs"
+  },
+  "dependencies": {
+    "@netlify/database": "^2.0.0",
+    "nodemailer": "^10.1.0",
+    "postgres": "^3.4.7"
+  }
+}

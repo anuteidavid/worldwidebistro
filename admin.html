@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Administrare · World Wide Bistro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <header class="admin-header"><a href="/" class="admin-brand"><span>✦</span> World Wide Bistro</a><a href="/" class="return-link">← Înapoi la site</a></header>
+      <section id="login-panel" class="login-panel">
+        <p class="eyebrow">ZONA ECHIPEI</p>
+        <h1>Administrare</h1>
+        <p class="muted">Autentifică-te pentru a vedea solicitările trimise prin site.</p>
+        <form id="login-form">
+          <label>Nume utilizator<input name="username" autocomplete="username" required /></label>
+          <label>Parolă<input name="password" type="password" autocomplete="current-password" required /></label>
+          <button class="primary-button" type="submit">Autentificare <span>↗</span></button>
+          <p id="login-feedback" class="feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section id="dashboard" hidden>
+        <div class="dashboard-heading"><div><p class="eyebrow">WORLD WIDE BISTRO</p><h1>Solicitări</h1><p class="muted">Răspunde clientului și actualizează starea solicitării. Rezervarea este confirmată doar după ce verifici disponibilitatea.</p></div><button id="logout-button" class="quiet-button" type="button">Deconectare</button></div>
+        <div class="list-toolbar"><span id="request-count">Se încarcă…</span><button id="refresh-button" class="quiet-button" type="button">Reîmprospătează ↻</button></div>
+        <p id="dashboard-feedback" class="feedback" role="status" aria-live="polite"></p>
+        <div id="request-list" class="request-list"></div>
+      </section>
+      <footer class="admin-footer">Datele solicitărilor sunt stocate local în baza de date a serverului.</footer>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>
